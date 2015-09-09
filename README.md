@@ -22,7 +22,8 @@ level.
 
 *It's never to late to learn how to type. I want to use popular contemporary music and 
 it's influence to create a learning experience that is fun and productive. 
-
+##Wireframes
+[Imgur](http://i.imgur.com/YVi617i.jpg)
 ##Instructions
 ##Technical requirements/
 ##Installation
