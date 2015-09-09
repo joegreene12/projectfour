@@ -24,9 +24,9 @@ level.
 it's influence to create a learning experience that is fun and productive. 
 ##Wireframes
 ![alt image](http://i.imgur.com/YVi617i.jpg)
-![alt image](http://i.imgur.com/3UwbLXC.jpg)
-![alt image](http://i.imgur.com/of0qFY1.jpg)
-![alt image](http://i.imgur.com/BO4Rs8X.jpg)
+[imgur](http://i.imgur.com/3UwbLXC.jpg)
+[imgur](http://i.imgur.com/of0qFY1.jpg)
+[imgur](http://i.imgur.com/BO4Rs8X.jpg)
 ##Instructions
 ##Technical requirements/
 ##Installation
