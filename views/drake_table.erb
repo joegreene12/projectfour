@@ -18,97 +18,89 @@ ajax/libs/jquery/1.4.2/jquery.min.js"></script>
     <SCRIPT LANGUAGE="JavaScript">
 
 
+      msg = new Array("Started from the bottom now we're here.",
+      "Started from the bottom now we're here!",
+      "Started from the bottom now we're here",
+      "Started from the bottom now we're here.")
+      word = 10
+      function m() {
+      msg = new Array("PStarted from the bottom now we're here.",
+      "Started from the bottom now we're here!",
+      "Started from the bottom now we're here",
+      "Started from the bottom now we're here.")
+      word = 10
+      }
+      function e() {
+      msg = new Array("Started from the bottom now we're here Started from the bottom now we're herest!",
+      "Started from the bottom now we're hereStarted from the bottom now we're here.",
+      "Started from the bottom now we're hereStarted from the bottom now we're here!",
+      "Started from the bottom now we're hereStarted from the bottom now we're here?")
+      word = 15
+      }
+      function s() {
+      msg = new Array("Started from the bottom now we're here.",
+      "Started from the bottom now we're here",
+      "Started from the bottom now we're here",
+      "Started from the bottom now we're here!")
+      word = 7
+      }
+function beginIt() {
+randNum = Math.floor((Math.random() * 10)) % 4
+msgType = msg[randNum]
+day = new Date();
+startType = day.getTime();
+document.theForm.given.value = msgType
+document.theForm.typed.focus();
+document.theForm.typed.select();
+}
+function cheat() {
+alert("You can not change that!");
+document.theForm.typed.focus();
+}
+function stopIt() {
+dayTwo = new Date();
+endType = dayTwo.getTime();
+totalTime = ((endType - startType) / 1000)
+spd = Math.round((word/totalTime) * 60)
+if (document.theForm.typed.value == document.theForm.given.value) {
+alert("\nYou typed a " + word + " word sentence in "
++ totalTime + " seconds, a speed of about " + spd + " words per minute!")
+}
+else {
+alert("You made an error, but typed at a speed of " + spd + " words per minute.")
+   }
+}
+// End -->
+</SCRIPT>
+</HEAD>
 
+<CENTER>
+<FORM name="theForm">
+<TABLE BORDER=3 CELLSPACING=0 CELLPADDING=0>
+<TR>
+<TD><p>Are you a....</p></TD>
+<TD align=center><input type=radio name="sme" value="Beginner" onClick="s()" checked>Beginner
+<input type=radio name="sme" value="Novice" onClick="m()">Novice
+<input type=radio name="sme" value="Expert" onClick="e()">Expert</TD>
+</TR>
+<TR><TD colspan=2><BR>
+<center><input type=button value="Start Typing Test" name="start" onClick="beginIt()"></center><P>
+<textarea name="given" cols=53 rows=3 wrap=on onFocus="cheat()" id="lyricBox"></textarea></TD>
+</TR>
+<TR><TD colspan=2><center><input type=text name="typed" size=45>
+<input type=button value="DONE"  name="stop"  onClick="stopIt()"></center></TD>
+</TR>
+</TABLE></FORM>
+</CENTER>
 
-        msg = new Array("Started from the bottom now we're here.",
-        "Started from the bottom now we're here!",
-        "Started from the bottom now we're here",
-        "Started from the bottom now we're here.")
-        word = 10
-        function m() {
-        msg = new Array("PStarted from the bottom now we're here.",
-        "Started from the bottom now we're here!",
-        "Started from the bottom now we're here",
-        "Started from the bottom now we're here.")
-        word = 10
-        }
-        function e() {
-        msg = new Array("Started from the bottom now we're here Started from the bottom now we're herest!",
-        "Started from the bottom now we're hereStarted from the bottom now we're here.",
-        "Started from the bottom now we're hereStarted from the bottom now we're here!",
-        "Started from the bottom now we're hereStarted from the bottom now we're here?")
-        word = 15
-        }
-        function s() {
-        msg = new Array("Started from the bottom now we're here.",
-        "Started from the bottom now we're here",
-        "Started from the bottom now we're here",
-        "Started from the bottom now we're here!")
-        word = 7
-        }
-
-
-
-
-    function beginIt() {
-    randNum = Math.floor((Math.random() * 10)) % 4
-    msgType = msg[randNum]
-    day = new Date();
-    startType = day.getTime();
-    document.theForm.given.value = msgType
-    document.theForm.typed.focus();
-    document.theForm.typed.select();
-    }
-    function cheat() {
-    alert("You can not change that!");
-    document.theForm.typed.focus();
-    }
-    function stopIt() {
-    dayTwo = new Date();
-    endType = dayTwo.getTime();
-    totalTime = ((endType - startType) / 1000)
-    spd = Math.round((word/totalTime) * 60)
-    if (document.theForm.typed.value == document.theForm.given.value) {
-    alert("\nYou typed a " + word + " word sentence in "
-    + totalTime + " seconds, a speed of about " + spd + " words per minute!")
-    }
-    else {
-    alert("You made an error, but typed at a speed of " + spd + " words per minute.")
-       }
-    }
-    // End
-     </SCRIPT>
-
-
-  </head>
-
-    <body>
-    <CENTER>
-    <FORM name="theForm">
-    <TABLE BORDER=30 CELLSPACING=0 CELLPADDING=0>
-    <TR>
-    <TD>As a Drake fan, I know his lyrics....</TD>
-    <TD align=center>
-    <input type=radio name="sme" value="Novice" onClick="m()">Pretty Well
-    <input type=radio name="sme" value="Expert" onClick="e()">By Heart</TD>
-    </TR>
-    <TR><TD colspan=2><BR>
-    <center><input type=button value="Start Typing Test" rows = 30 name="start" onClick="beginIt()"></center><P>
-    <textarea name="given" cols=53 rows=20 wrap=on onFocus="cheat()"></textarea></TD>
-    </TR>
-    <TR><TD colspan=2><center><input type=text name="typed" size=45>
-    <input type=button value="DONE"  name="stop"  onClick="stopIt()"></center></TD>
-    </TR>
-    </TABLE></FORM>
-  </CENTER>
   <div id="b">
     <img src="http://i.imgur.com/t3fLVnF.png" alt="" />
 
   </div>
-   <!-- <audio src="../song2.mp3" autoplay="autoplay"></audio> -->
+   <audio src="../song2.mp3" autoplay="autoplay"></audio>
 
   <script type="text/javascript">
-  var max = 1100; //arbitrary
+  var max = 100; //arbitrary
   setTimeout(myFunction, 100);
   function myFunction() {
       var left = parseInt($('#b').css('left'));
